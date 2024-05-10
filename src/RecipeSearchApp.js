@@ -9,7 +9,7 @@ export const RecipeSearchApp = ({ setStateLoader }) => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [searchedWord, setSearchedWord] = useState('bread');
+  const [searchedWord, setSearchedWord] = useState('chicken');
   const [btnDisabled, setBtnDisabled] = useState(true);
 
 
