@@ -1,0 +1,504 @@
+body, button, input, textarea {
+  font-family: 'Comfortaa', cursive;
+}
+
+.grey {
+  background-color: rgb(241, 238, 238);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.inputContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 300px;
+  margin-right: 5px;
+  padding: 10px;
+  border: 1px solid rgb(229, 226, 226);
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  border-color: #ccc;
+}
+
+button {
+  border-radius: 5px;
+  background-color: #cee2f2;
+  border: 1px solid #a7b8c6;
+  cursor: pointer;
+}
+
+.searchIconDisabled {
+  filter: opacity(0.2) ;
+}
+
+button:hover,
+button:focus {
+  background-color: #a7b8c6;
+}
+
+.inactiveBtn:hover,
+.inactiveBtn:focus {
+  background-color: rgb(241, 238, 238);
+  cursor: default;
+}
+
+.blue {
+  background-color:#a7b8c6;
+}
+
+.red, 
+.swal-button, 
+.swal-button:not([disabled]) {
+  background-color: #f8bb86;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: #f19544;
+}
+
+.centerWrapper {
+  width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 2px 6px #ccc;
+}
+
+.descriptionContainer {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  width: 350px;
+}
+
+.nutrientsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nutrientsList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nutrientsList  li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 2px 6px #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 50px;
+}
+
+.nutrientsList  li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nutrient {
+  margin-bottom: 10px;
+}
+
+.nutrientValue {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.caloriesContainer {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.calories {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.recipeImage {
+  margin: 10px 30px 10px 10px;
+}
+
+.ingredientsList {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.ingredientsList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.ingedientsIcon {
+  margin-right: 10px;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 20px 0 10px;
+  padding: 10px;
+  border: 1px solid rgb(229, 226, 226);
+  border-radius: 5px;
+}
+
+.analizeBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #cee2f2;
+}
+
+.chooseAppBtnWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.chooseAppBtn {
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: #a7b8c6 3px double;
+  border-bottom: none;
+}
+
+.chooseAppBtnWrapper button:first-child {
+  margin-right: 10px;
+}
+
+hr {
+  margin: 0 0 1px 0;
+  border-top: 0.5px solid #a7b8c6;
+}
+
+.secondLine {
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.nutrientsDataList {
+  align-self: center;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.nutritionDataWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.nutritionDataWrapper h2 {
+  align-self: center;
+}
+
+.nutrientsDataList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.inactiveBtn {
+  background-color: rgb(241, 238, 238);
+}
+
+/* LOADER */
+
+.container_loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a94;
+}
+  
+.lds-roller {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+  
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+  
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+  z-index: 2;
+}
+  
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+  
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+  
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+  
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+  
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+  
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+  
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+  
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+  
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+  
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+  
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+  
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+  
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+  
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+  
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+  
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+  
+@keyframes lds-roller {
+  0% {
+  transform: rotate(0deg);
+  }
+  
+  100% {
+  transform: rotate(360deg);
+  }
+}
+
+/* For tablets and phones */
+@media (max-width: 768px) {
+
+  .centerWrapper {
+    width: 550px;
+  }
+
+  .descriptionContainer {
+    min-height: 290px;
+  }
+
+  .recipeImage {
+    width: 250px;
+    margin-right: 20px;
+  }
+
+  .nutrientsContainer {
+    justify-content: center;
+  }
+
+  h2 {
+    width: auto;
+    font-size: 1.3em;
+    margin-top: 0;
+  }
+
+  .nutrientValue {
+    font-size: 1.05em;
+  }
+
+  .calories {
+    font-size: 1.3em;
+  }
+
+  .caloriesContainer {
+    margin-top: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 630px) {
+  .centerWrapper {
+    width: 470px;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .chooseAppBtn {
+    font-size: 1rem;
+  }
+
+  .descriptionContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .recipeImage {
+    margin: 10px 10px 30px 10px;
+  }
+
+  h2 {
+    width: 400px;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .caloriesContainer {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .ingredientsList {
+    margin-left: 0;
+  }
+
+  .nutritionDataWrapper h2 {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .centerWrapper {
+    width: 360px;
+  }
+  
+  .chooseAppBtn {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  .secondLine {
+    margin-bottom: 20px;
+  }
+
+  .recipeImage {
+    margin: 0 10px 20px 10px;
+  }
+
+  h2 {
+    width: 330px;
+    font-size: 1em;
+  }
+
+  .nutrientsContainer p, .nutrient, .nutrientValue {
+    font-size: 14px;
+  }
+
+  .calories {
+    font-size: 1.2em;
+  }
+
+  .ingredientsList span {
+    font-size: 14px;
+  }
+
+  .caloriesContainer {
+    margin-bottom: 10px;
+  }
+
+  .nutritionText {
+    font-size: 14px;
+    margin: 0px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  .nutritionDataWrapper h2 {
+    margin-bottom: 10px;
+  }
+
+  .nutrientsDataList li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+  }
+}
